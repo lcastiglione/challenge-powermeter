@@ -15,6 +15,7 @@ Para el presente repositorio, se siguieron las instrucciones indicadas en este [
 - El proyecto está construido en un entorno virtual con pipenv.
 - Se acompaña el proyecto con una base de datos con datos cargados para tests.
 - Se acompaña set de tests unitarios.
+- 
 
 
 
@@ -26,13 +27,19 @@ Todos los *endpoints* de la aplicación están documentados en `/api/docs`
 
 ## Preparación de entorno de trabajo
 
-1) Clonar repositorio
+1. Clonar repositorio
 
    ```
    $ git clone https://github.com/lcastiglione/challenge-powermeter.git
    ```
 
-2) Para el *ejercicio-1*, entrar en dicha carpeta y ejecutar:
+2. Instalar la dependencia `pipenv`
+
+   ```
+   pip3 install pipenv
+   ```
+
+3. Para el *ejercicio-1*, entrar en dicha carpeta y ejecutar:
 
    ```
    $ pipenv shell

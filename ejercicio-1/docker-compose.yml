@@ -1,0 +1,28 @@
+﻿version: "3.7"
+
+services:
+  powermeter:
+    build:
+      context: .
+    container_name:  powermeter
+    image:           powermeter
+    volumes:
+      - static_data:/powermeter/static
+    environment:
+      - ALLOWED_HOSTS=127.0.0.1,localhost
+      - DEBUG=0
+
+  powermeter-nginx:
+    build:
+      context: ./nginx
+    container_name:  powermeter-nginx
+    image:           powermeter-nginx
+    volumes:
+      - static_data:/powermeter/static
+    ports:
+      - "8080:8080"
+    depends_on:
+      - powermeter
+
+volumes:
+  static_data:

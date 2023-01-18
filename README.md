@@ -90,6 +90,10 @@ Está hecho un set de pruebas unitarias para el modelo Measure y Measurement. Pa
 $ docker run powermeter sh -c "python manage.py test apps.medidores.tests" 
 ```
 
+> Nota:
+>
+> Para usar este comando, previamente se deberá construir la imagen y e iniciar los contenedores. [VER](#Producción)
+
 O sino usando el entorno virtual dentro de la carpeta *ejercicio-1*:
 
 ```shell

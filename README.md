@@ -1,4 +1,4 @@
-﻿# Challenge para la empresa Powermeter
+﻿# Challenge para la empresa Powermeter ![](https://www.powermeter.com.ar/files/logo-1.png)
 
 Para realizar este challenge se siguieron las instrucciones indicadas en este [archivo](Instrucciones.pdf).
 
@@ -31,15 +31,15 @@ Tabla de contenido
 - Los parámetros `DEBUG` y `ALLOW_HOST` del archivo `settings.py`reciben su valor desde docker al construir la imagen. Si no los encuentran, usa los valores por default para desarrollo.
 - Utilizo una configuración básica de Nginx donde le paso algunos parámetros para que funcione en conjunto con uWSGI. Elegí la imagen `nginxinc/nginx-unprivileged:1-alpine` para tenerlo sin privilegios root.
 - En los modelos `Measurer` y `Measurement` uso la clase `CreateModelMixin` para generar automáticamente los endpoint para crear medidores y mediciones, respectivamente y la clase `GenericViewSet` para crear los endpoint personalizados de consumo de potencia.
-- Con respecto al desarrollo usé pipenv y docker.
+- Con respecto al desarrollo usé pipenv.
 - La API posee las siguientes restricciones: 
-  - No se permiten números negativos
-  - No se puede cargar una medición en un medidor que no existe
-  - No pueden haber dos medidores con el mismo ID
+  - No se permiten números negativos en el consumo de potencia (kWh).
+  - No se puede cargar una medición en un medidor que no existe.
+  - No pueden haber dos medidores con el mismo ID.
   - Si no existen mediciones para un medidor que si existe, devuelve consumo 0.
 
-- Si bien se trata de runa aplicación simple, no pueden faltar los tests unitarios. Se adjunta el set de test para los modelos `Measurer` y `Measurement`.
-- Por último, pero no menos importante, no agregué documentación en las funciones porque ya están los tests y no quedaban muchas funciones para hacer esto (se hacía un poco redundante). Pero para proyectos más complejos considero que son necesarias porque le da al desarrollador las herramientas para entender el código y hasta hacer micropruebas para entender cómo funciona (por ejemplo con `doctest`).
+- Si bien se trata de una aplicación simple, no pueden faltar los tests unitarios. Adjunto el set de test para los modelos `Measurer` y `Measurement`.
+- Por último, pero no menos importante, no agregué documentación en las funciones porque ya están los tests y no quedaban muchas funciones para hacer esto (se hacía un poco redundante). Pero para proyectos más complejos, considero que son necesarias porque le da al desarrollador las herramientas para entender el código y hacer micropruebas para entender cómo funcionan (por ejemplo, con `doctest`), entre otros.
 
 
 
@@ -151,5 +151,4 @@ Para este punto no se usa entorno virtual. Dentro de la carpeta *ejercicio-2* ej
 ```bash
 $ python main.py
 ```
-
 

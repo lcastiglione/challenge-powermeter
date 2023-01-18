@@ -1,4 +1,4 @@
-﻿# Challenge para la empresa Powermeter ![](https://www.powermeter.com.ar/files/logo-1.png)
+﻿# Challenge para la empresa Powermeter
 
 Para realizar este challenge se siguieron las instrucciones indicadas en este [archivo](Instrucciones.pdf).
 

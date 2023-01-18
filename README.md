@@ -30,6 +30,7 @@ Tabla de contenido
 - Paso las credenciales de administrador por un tema de simplicidad, pero NUNCA hay hacer esto. Para eso, usaría un gestor de credenciales como Vault o GitGuardian.
 - Los parámetros `DEBUG` y `ALLOW_HOST` del archivo `settings.py`reciben su valor desde docker al construir la imagen. Si no los encuentran, usa los valores por default para desarrollo.
 - Utilizo una configuración básica de Nginx donde le paso algunos parámetros para que funcione en conjunto con uWSGI. Elegí la imagen `nginxinc/nginx-unprivileged:1-alpine` para tenerlo sin privilegios root.
+- No utilicé diagramas UML para los modelos porque se trata de un proyecto simple.
 - En los modelos `Measurer` y `Measurement` uso la clase `CreateModelMixin` para generar automáticamente los endpoint para crear medidores y mediciones, respectivamente y la clase `GenericViewSet` para crear los endpoint personalizados de consumo de potencia.
 - Con respecto al desarrollo usé pipenv.
 - La API posee las siguientes restricciones: 

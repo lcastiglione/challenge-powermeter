@@ -9,14 +9,14 @@ Tabla de contenido
 
 * [Aclaraciones](#Aclaraciones)
 * [Documentación](#Documentación)
-* [Preparación de entorno de trabajo](#Preparación de entorno de trabajo)
+* [Preparación](#Preparación)
 * [Dependencias](#Dependencias)
 * [Tests](#tests)
 * [Despliegue](#Despliegue)
-     * [Ejercicio 1](#Ejercicio 1)
+     * [Ejercicio 1](#Ejercicio-1)
        * [Desarrollo](#Desarrollo)
        * [Producción](#Producción)
-     * [Ejercicio 2](#Ejercicio 2)
+     * [Ejercicio 2](#Ejercicio-2)
 
 <!--te-->
 
@@ -49,7 +49,7 @@ Todos los *endpoints* de la aplicación están documentados en `/api/docs`
 
 
 
-## Preparación de entorno de trabajo
+## Preparación
 
 1. Clonar repositorio
 
@@ -104,7 +104,7 @@ $ python powermeter/manage.py test apps.medidores.tests
 
 
 
-### Ejercicio 1
+### Ejercicio-1
 
 Se puede ejecutar la aplicación en modo desarrollo y/o en producción con uWSGI y NGINX.
 
@@ -144,7 +144,7 @@ Luego entrar al link `http://localhost:3000`
 
    
 
-### Ejercicio 2
+### Ejercicio-2
 
 Para este punto no se usa entorno virtual. Dentro de la carpeta *ejercicio-2* ejecutar:
 

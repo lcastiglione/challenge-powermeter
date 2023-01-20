@@ -110,8 +110,6 @@ python powermeter/manage.py test apps.medidores.tests
 
 ### Ejercicio-1
 
-Se puede ejecutar la aplicación en modo desarrollo y/o en producción con uWSGI y NGINX.
-
 #### Desarrollo
 
 Con el entorno virtual cargado, entrar a la carpeta *ejercicio-1*:
@@ -134,7 +132,7 @@ Luego entrar al link `http://localhost:3000`
 
 2. Entrar al link `http://localhost:8080`
 
-3. También se puede entrar al panel administrador  `http://localhost:8080/admin`, usando el usuario `admin` y contraseña `1234`.
+3. También se puede entrar al panel administrador  `http://localhost:8080/admin`.
 
 4. Para iniciar de nuevo los contenedores ejecutar:
 

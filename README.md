@@ -55,7 +55,7 @@ Todos los *endpoints* de la aplicación están documentados en `/api/docs`
 1. Clonar repositorio
 
    ```
-   $ git clone https://github.com/lcastiglione/challenge-powermeter.git
+   git clone https://github.com/lcastiglione/challenge-powermeter.git
    ```
 
 2. Instalar la dependencia `pipenv`
@@ -67,8 +67,8 @@ Todos los *endpoints* de la aplicación están documentados en `/api/docs`
 3. Para el *ejercicio-1*, entrar en dicha carpeta y ejecutar:
 
    ```
-   $ pipenv shell
-   $ pipenv install
+   pipenv shell
+   pipenv install
    ```
 
 
@@ -88,7 +88,7 @@ drf-yasg==1.21.4
 Está hecho un set de pruebas unitarias para el modelo Measure y Measurement. Para ejecutarlos, se puede aprovechar la imagen ya construida y usar el siguiente comando:
 
 ```bash
-$ docker run powermeter sh -c "python manage.py test apps.medidores.tests" 
+docker run powermeter sh -c "python manage.py test apps.medidores.tests" 
 ```
 
 > Nota:
@@ -98,7 +98,7 @@ $ docker run powermeter sh -c "python manage.py test apps.medidores.tests"
 O sino usando el entorno virtual dentro de la carpeta *ejercicio-1*:
 
 ```shell
-$ python powermeter/manage.py test apps.medidores.tests
+python powermeter/manage.py test apps.medidores.tests
 ```
 
 
@@ -118,7 +118,7 @@ Se puede ejecutar la aplicación en modo desarrollo y/o en producción con uWSGI
 Con el entorno virtual cargado, entrar a la carpeta *ejercicio-1*:
 
 ```shell
-$ python powermeter/manage.py runserver 3000
+python powermeter/manage.py runserver 3000
 ```
 
 Luego entrar al link `http://localhost:3000`
@@ -130,7 +130,7 @@ Luego entrar al link `http://localhost:3000`
 1. Dentro de la carpeta *ejercicio-1* ejecutar:
 
    ```bash
-   $ docker compose up --build
+   docker compose up --build
    ```
 
 2. Entrar al link `http://localhost:8080`
@@ -144,7 +144,7 @@ Luego entrar al link `http://localhost:3000`
 4. Para iniciar de nuevo los contenedores ejecutar:
 
    ```bash
-   $ docker start powermeter-nginx powermeter
+   docker start powermeter-nginx powermeter
    ```
 
    
@@ -154,6 +154,6 @@ Luego entrar al link `http://localhost:3000`
 Para este punto no se usa entorno virtual. Dentro de la carpeta *ejercicio-2* ejecutar:
 
 ```bash
-$ python main.py
+python main.py
 ```
 

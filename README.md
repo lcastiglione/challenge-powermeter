@@ -27,7 +27,6 @@ Tabla de contenido
 - Para la documentación de la API usé swagger que permite, además, realizar test a los endpoints. Utilizo la dependencia `drf-yasg`.
 - Django sirve para crear una aplicación, manejar su lógica y gestionar sus datos, pero no se encarga de servir el contenido. Para eso, opté por usar uWSGI como servidor de la aplicación y Nginx como proxy inverso al servidor de la aplicación.
 - Adjunto una pequeña base de datos para hacer algunos test. La misma se puede ver a través del panel administrador (`user: admin pass: 1234`).
-- Paso las credenciales de administrador por un tema de simplicidad, pero NUNCA hay hacer esto. Para eso, usaría un gestor de credenciales como Vault o GitGuardian.
 - Los parámetros `DEBUG` y `ALLOW_HOST` del archivo `settings.py`reciben su valor desde docker al construir la imagen. Si no los encuentran, usa los valores por default para desarrollo.
 - Utilizo una configuración básica de Nginx donde le paso algunos parámetros para que funcione en conjunto con uWSGI. Elegí la imagen `nginxinc/nginx-unprivileged:1-alpine` para tenerlo sin privilegios root.
 - No utilicé diagramas UML para los modelos porque se trata de un proyecto simple.
@@ -40,7 +39,7 @@ Tabla de contenido
   - Si no existen mediciones para un medidor que si existe, devuelve consumo 0.
 
 - Si bien se trata de una aplicación simple, no pueden faltar los tests unitarios. Adjunto el set de test para los modelos `Measurer` y `Measurement`. No se usan los test de integración en esta aplicación.
-- Por último, pero no menos importante, no agregué documentación en las funciones porque ya están los tests y no quedaban muchas funciones para hacer esto (se hacía un poco redundante). Pero para proyectos más complejos, considero que son necesarias porque le da al desarrollador las herramientas para entender el código y hacer micropruebas para entender cómo funcionan (por ejemplo, con `doctest`), entre otros.
+- Por último, pero no menos importante, no agregué documentación en las funciones porque ya están los tests y no quedaban muchas funciones para hacer esto (se hacía un poco redundante).
 
 
 
@@ -93,7 +92,7 @@ docker run powermeter sh -c "python manage.py test apps.medidores.tests"
 
 > Nota:
 >
-> Para usar este comando, previamente se deberá construir la imagen y e iniciar los contenedores. [VER](#Producción)
+> Para usar este comando, previamente se deberá construir la imagen e iniciar los contenedores. [VER](#Producción)
 
 O sino usando el entorno virtual dentro de la carpeta *ejercicio-1*:
 
@@ -136,10 +135,6 @@ Luego entrar al link `http://localhost:3000`
 2. Entrar al link `http://localhost:8080`
 
 3. También se puede entrar al panel administrador  `http://localhost:8080/admin`, usando el usuario `admin` y contraseña `1234`.
-
-   > Nota
-   >
-   > Se muestra el usuario y contraseña para poder realizar pruebas con datos ya cargados en la base de datos.
 
 4. Para iniciar de nuevo los contenedores ejecutar:
 

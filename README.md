@@ -39,7 +39,7 @@ Tabla de contenido
   - No pueden haber dos medidores con el mismo ID.
   - Si no existen mediciones para un medidor que si existe, devuelve consumo 0.
 
-- Si bien se trata de una aplicación simple, no pueden faltar los tests unitarios. Adjunto el set de test para los modelos `Measurer` y `Measurement`.
+- Si bien se trata de una aplicación simple, no pueden faltar los tests unitarios. Adjunto el set de test para los modelos `Measurer` y `Measurement`. No se usan los test de integración en esta aplicación.
 - Por último, pero no menos importante, no agregué documentación en las funciones porque ya están los tests y no quedaban muchas funciones para hacer esto (se hacía un poco redundante). Pero para proyectos más complejos, considero que son necesarias porque le da al desarrollador las herramientas para entender el código y hacer micropruebas para entender cómo funcionan (por ejemplo, con `doctest`), entre otros.
 
 
